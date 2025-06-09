@@ -16,6 +16,7 @@ body {
     padding: 4rem 5%;
     gap: 2rem;
     flex-wrap: wrap;
+    flex-direction: row;
   }
 
   .contenido {
@@ -190,6 +191,8 @@ border-left: 6px solid #339989;
   margin: 0 auto;
   gap: 40px;
   flex-wrap: nowrap; /* NO envolver en pantallas grandes */
+
+  margin-bottom: 5px;
 }
 
 
@@ -434,9 +437,7 @@ border-left: 6px solid #339989;
 
 
 
-#preguntas {
-  justify-content:left
-}
+
 
 
 /* Footer */
@@ -580,3 +581,31 @@ footer {
   }
 }
 
+
+
+/* Estilo para dispositivos móviles y tablets */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .contenido {
+    order: 1;
+  }
+
+  .imagen {
+    order: 2;
+  }
+
+  .servicios-contenedor {
+    flex-direction: column;
+  }
+
+  .servicios-texto {
+    order: 3;
+  }
+
+  .servicios-imagen {
+    order: 4;
+  }
+}
