@@ -94,12 +94,13 @@ h3 {
 
 /* Header y navegación */
 header {
-  background-color: transparent; 
+  background-color: #ffff; 
   padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
   z-index: 100;
+  
 }
 
 nav {
@@ -192,7 +193,7 @@ border-left: 6px solid #339989;
   gap: 40px;
   flex-wrap: nowrap; /* NO envolver en pantallas grandes */
 
-  margin-bottom: 5px;
+ 
 }
 
 
