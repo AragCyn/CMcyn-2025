@@ -13,10 +13,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4rem 5%;
+    
     gap: 2rem;
     flex-wrap: wrap;
     flex-direction: row;
+
+
+    padding: 2rem 5% 4rem 5%; /* arriba, derecha, abajo, izquierda */
   }
 
   .contenido {
@@ -67,6 +70,7 @@ body {
     .hero {
       flex-direction: column;
       text-align: center;
+  
     }
     .contenido, .imagen {
       max-width: 100%;
