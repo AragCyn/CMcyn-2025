@@ -66,16 +66,7 @@ body {
     object-fit: contain;
   }
 
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
   
-    }
-    .contenido, .imagen {
-      max-width: 100%;
-    }
-  }
 
  
 /* Títulos */
@@ -574,7 +565,8 @@ footer {
 @media (max-width: 768px) {
 
 #servicios {
-    padding: 20px 15px 40px 15px; /* menos espacio arriba y general para mobile */
+    padding-top: 0; /* menos espacio arriba y general para mobile */
+    
   }
 
   .servicios-contenedor {
@@ -647,13 +639,18 @@ footer {
 
 /* Estilo para dispositivos móviles y tablets */
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
+  
 
- padding-bottom: 2rem; /* o menos si querés que el contenido esté más pegado */
-
-  }
-
+    .hero {
+      flex-direction: column;
+      text-align: center;
+padding-bottom: 0;
+  
+    }
+    .contenido, .imagen {
+      max-width: 100%;
+    }
+  
   .contenido {
     order: 1;
   }
