@@ -192,7 +192,7 @@
  
 
   <footer>
-    <p>© 2025 TuNombre - Community Manager</p>
+    <p>© 2025 - Community Manager</p>
   </footer>
 
   <!-- para menú hamburguesa en cel"-->
@@ -248,8 +248,35 @@
   observer.observe(document.querySelector('.servicios-contenedor'));
 </script>
 
+<script>
+
+  window.addEventListener('scroll', () => {
+  navLinks.classList.remove('show');
+});
+</script>
 
 
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".servicios-texto li");
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1
+      }
+    );
+
+    items.forEach(item => observer.observe(item));
+  });
+</script>
 
 
 </body>

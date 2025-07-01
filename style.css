@@ -184,7 +184,7 @@ border-left: 6px solid #339989;
 
 */
 #servicios {
-  padding: 60px 20px;
+  padding: 10px 20px 60px 20px; /* arriba, derecha, abajo, izquierda */
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -224,6 +224,7 @@ border-left: 6px solid #339989;
 }
 
 .servicios-texto li {
+  
   margin-bottom: 10px;
   font-size: 1.1em;
   color: #333;
@@ -237,6 +238,8 @@ border-left: 6px solid #339989;
   left: 0;
   color: #03a9f4;
 }
+
+
 
 /* Caja personalizada*/
 .caja-personalizada{
@@ -569,6 +572,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+#servicios {
+    padding: 20px 15px 40px 15px; /* menos espacio arriba y general para mobile */
+  }
+
   .servicios-contenedor {
     flex-direction: column;
     text-align: center;
@@ -584,7 +592,56 @@ footer {
   .servicios-texto {
     max-width: 100%;
   }
+
+  
+  .servicios-texto ul {
+    padding-left: 0;
+  }
+
+  .servicios-texto li {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centrado horizontal */
+    gap: 10px; /* espacio entre tilde y texto */
+    padding-left: 0; /* quitar espacio del before */
+    position: relative;
+  }
+
+  .servicios-texto li::before {
+    content: "✔";
+    position: static; /* quitar absoluto */
+    transform: none;  /* quitar el translate */
+    color: #03a9f4;
+    font-weight: bold;
+  }
+
+
+
+  .servicios-texto li::before {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .servicios-texto li {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .servicios-texto li.visible::before,
+  .servicios-texto li.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
+
+
+
+
+
+
+
 
 
 
@@ -592,6 +649,9 @@ footer {
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
+
+ padding-bottom: 2rem; /* o menos si querés que el contenido esté más pegado */
+
   }
 
   .contenido {
