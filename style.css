@@ -139,7 +139,7 @@ section {
   padding: 3rem 2rem;
   max-width: 900px;
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -175,7 +175,7 @@ border-left: 6px solid #339989;
 
 */
 #servicios {
-  padding: 10px 20px 60px 20px; /* arriba, derecha, abajo, izquierda */
+  padding: 10px 20px 30px 20px; /* arriba, derecha, abajo, izquierda */
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -232,7 +232,13 @@ border-left: 6px solid #339989;
 
 
 
-/* Caja personalizada*/
+/* Caja personalizada/
+
+#planes{
+padding-top: 0;
+}
+
+
 .caja-personalizada{
   text-align: center;
   padding: 0 5rem;
@@ -246,10 +252,10 @@ border-left: 6px solid #339989;
   font-size: 1.5rem;
 }
 
-
+*
 /* Metodología */
 #metodologia {
-  padding: 60px 20px;
+  padding-top: 0;
   background-color: transparent;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
@@ -325,6 +331,10 @@ border-left: 6px solid #339989;
 
 /* IMPORTANCIA */
 
+#importancia{
+  padding-top: 0;
+}
+
 .titulo-importancia {
   display: flex;
   align-items:center;
@@ -338,6 +348,11 @@ border-left: 6px solid #339989;
   height: 40px;
 }
 
+
+#diseno{
+padding-top:0;
+
+}
 .titulo-diseño {
   display: flex;
   align-items: center;
@@ -352,6 +367,14 @@ border-left: 6px solid #339989;
 }
 
 /* Sobre mí */
+
+#sobre-mi{
+
+padding-top:0;
+
+}
+
+
 #sobre-mi p {
   max-width: 700px;
   margin: 0 auto;
@@ -360,6 +383,13 @@ border-left: 6px solid #339989;
 }
 
 /* Contacto */
+
+#contacto {
+  margin-top: 1px;
+  padding-top: 0;
+}
+
+
 #contacto p {
   font-size: 1.2rem;
   text-align: center;
@@ -385,6 +415,10 @@ border-left: 6px solid #339989;
 /* Iconos */
 .bx {
   font-size: 1.8rem;
+}
+
+#faq{
+  padding-top:0;
 }
 
 .faq-section {
@@ -434,7 +468,9 @@ border-left: 6px solid #339989;
 }
 
 
-
+#preguntas{
+  padding-top:0;
+}
 
 
 
@@ -514,7 +550,7 @@ footer {
 /* Pantallas medianas: tablets (entre 768px y 1024px) */
 @media (max-width: 1024px) {
   #metodologia h2 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   .paso-container {
@@ -533,7 +569,7 @@ footer {
 /* Pantallas pequeñas: celulares (menos de 768px) */
 @media (max-width: 768px) {
   #metodologia {
-    padding: 40px 15px;
+    padding-top: 0;
   }
 
   #metodologia h2 {
@@ -565,7 +601,10 @@ footer {
 @media (max-width: 768px) {
 
 #servicios {
-    padding-top: 0; /* menos espacio arriba y general para mobile */
+
+  padding-bottom: 10px; /* antes tenía 60px o 30px */
+    margin-bottom: 0.5rem; /* opcional para quitar separación extra */
+    
     
   }
 
@@ -669,5 +708,63 @@ padding-bottom: 0;
 
   .servicios-imagen {
     order: 4;
+  }
+}
+
+/* Estilo para dispositivos móviles y tablets 
+#preguntas {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#contacto {
+  margin-top: 1px;
+  padding-top: 0;
+}
+
+*/
+
+#planes{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.caja-personalizada {
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.caja-personalizada h3 {
+  font-size: 2.5rem;
+  color: #2c6e91;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  
+}
+
+.caja-personalizada p {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2f4f4f;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Mejoras específicas para pantallas chicas */
+@media (max-width: 600px) {
+  .caja-personalizada {
+    padding: 1rem;
+  }
+
+  .caja-personalizada h3 {
+    font-size: 1.4rem;
+  }
+
+  .caja-personalizada p {
+    font-size: 1rem;
+    padding: 0 0.5rem;
   }
 }
