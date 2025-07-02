@@ -390,8 +390,13 @@ padding-top:0;
 #contacto {
   margin-top: 1px;
   padding-top: 0;
+  
 }
 
+#contacto h2{
+text-align: center;
+color: #9368d8;
+}
 
 #contacto p {
   font-size: 1.2rem;
@@ -400,7 +405,7 @@ padding-top:0;
 }
 
 #contacto a {
-  color: #1b4d3e;
+  
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
@@ -411,10 +416,18 @@ padding-top:0;
 
 #contacto a:hover,
 #contacto a:focus {
-  color: #339989;
+  color: #fa5991;
   outline: none;
 }
 
+
+.whatsapp a{
+  color: #03e2ff;
+}
+
+.instagram a{
+  color:#f8b95a ;
+}
 /* Iconos */
 .bx {
   font-size: 1.8rem;
